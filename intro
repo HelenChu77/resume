@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+       
+
+        .container {
+            max-width: 900px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border-left: 5px solid #007bff;
+            padding-left: 10px;
+            color: #007bff;
+        }
+        .list-group-item {
+            background-color: #ffffff;
+            border-left: 5px solid #007bff;
+        }
+        .badge {
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+        .profile-pic {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px; /* 讓圖片與文字間距更遠 */
+        }
+        @media (max-width: 768px) {
+            .project-container {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<script>
+    fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+</script>
+<body>
+
+    <div id="navbar-placeholder"></div>
+    <div class="container  mt-4">
+        <div class="profile-container">
+            <div class="row align-items-center">
+                
+                <!-- 左欄：大頭貼 -->
+                <div class="col-md-2  profile-pic">
+                    <img class="profile-pic" src="image/profile.jpg" alt="Profile Picture">
+                </div>
+
+                <!-- 右欄：個人簡介 -->
+                <div class="col-md-8">
+                    <div class="about-me">
+                        <h1>屈亭君</h1>
+                        <p><strong>ML 工程師 | 資料科學家 | 數據分析師</strong></p>
+                        <p>你好，我是屈亭君，畢業於中興大學應用數學系大數據研究所。</p>
+                        <p>現任職於國家中山科學研究院，主要負責負責供應鏈管理、零件資料庫管理、工程繪圖等工作。</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 主要內容 -->
+    <div class="container mt-4">
+        
+        <!-- 學歷 -->
+        <div class="mb-4">
+            <h2 class="section-title">🎓 Education</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>中興大學 應用數學大數據研究所（碩士）</h5>
+                    <span class="text-muted">2023/09 - 2025/07</span>
+                </li>
+                <li class="list-group-item">
+                    <h5>中興大學 圖書資訊學研究所（碩士）</h5>
+                    <span class="text-muted">2016/09 - 2020/06</span>
+                </li>
+                <li class="list-group-item">
+                    <h5>中興大學 外國語言學系（學士）</h5>
+                    <span class="text-muted">2012/09 - 2016/06</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 工作經歷 -->
+        <div class="mb-4">
+            <h2 class="section-title">💼 Experience</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>國家中山科學研究院 - 定契人員</h5>
+                    <span class="text-muted">2022/06 - Now</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 證照 -->
+        <div class="mb-4">
+            <h2 class="section-title">🏆 Certifications</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5>TOEIC 825 （Listening: 435, Reading: 390）</h5>
+                    <span class="text-muted">2024/08/09</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 技能 -->
+        <div class="mb-4">
+            <h2 class="section-title">🛠 Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="badge bg-primary">Python</span>
+                            <li class="list-group-item"><strong>人工智慧</strong> : PyTorch, TensorFlow, Scikit-learn</li>
+                            <li class="list-group-item"><strong>視覺化</strong> : Matplotlib, Seabon</li>
+                            <li class="list-group-item"><strong>資料處理</strong> : Pandas, OpenCV</li>
+                            <li class="list-group-item"><strong>預測維護</strong> : Predictive Maintenance, Supervised Contrastive Loss</li>
+                        </li>
+                        <!-- <li class="list-group-item"><span class="badge bg-success">Data</span></li> -->
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item"><span class="badge bg-success">C++</span> Basic Syntax</li> 
+                        <li class="list-group-item"><span class="badge bg-secondary">DevOps</span> Ubuntu, MySQL</li>
+                        <li class="list-group-item"><span class="badge bg-danger">Frontend</span> HTML, CSS, Boostrap, amChart, DataTables</li>
+                        <li class="list-group-item"><span class="badge bg-warning">Office</span> Word, Excel, Power Point</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 引入 Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
